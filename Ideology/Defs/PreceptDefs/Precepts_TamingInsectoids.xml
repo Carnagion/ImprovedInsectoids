@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- Issue of taming insects -->
+	<IssueDef>
+		<defName>TamingInsectoids</defName>
+		<label>taming insects</label>
+		<iconPath>UI/Issues/TamingInsectoids</iconPath>
+	</IssueDef>
+
+	<!-- Disapprove taming insectoids -->
+	<PreceptDef>
+		<defName>TamingInsectoids_Disapproved</defName>
+		<issue>TamingInsectoids</issue>
+		<label>disapproved</label>
+		<description>Insects are not meant to serve humans, and should be allowed to roam freely in the wild.</description>
+		<impact>Low</impact>
+		<displayOrderInIssue>0</displayOrderInIssue>
+		<displayOrderInImpact>100</displayOrderInImpact>
+		<conflictingMemes>
+			<li>HumanPrimacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>InsectoidPrimacy</li>
+		</associatedMemes>
+		<disallowHuntingCamps>false</disallowHuntingCamps>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>TamedInsectoids_Disapproved</thought>
+				<thoughtStageDescriptions>
+					<li>Few tame insectoids</li>
+					<li>Too many tame insectoids</li>
+				</thoughtStageDescriptions>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<!-- Love taming insectoids -->
+	<PreceptDef>
+		<defName>TamingInsectoids_Loved</defName>
+		<issue>TamingInsectoids</issue>
+		<label>loved</label>
+		<description>To tame an insectoid is to form a special and inseperable bond with it, acknowledging that it deserves a place in human society.</description>
+		<impact>High</impact>
+		<displayOrderInIssue>10</displayOrderInIssue>
+		<displayOrderInImpact>100</displayOrderInImpact>
+		<conflictingMemes>
+			<li>HumanPrimacy</li>
+		</conflictingMemes>
+		<associatedMemes>
+			<li>InsectoidPrimacy</li>
+		</associatedMemes>
+		<disallowHuntingCamps>false</disallowHuntingCamps>
+		<comps>
+			<li Class="PreceptComp_SituationalThought">
+				<thought>TamedInsectoids_Loved</thought>
+				<thoughtStageDescriptions>
+					<li>No tame insectoids</li>
+					<li>Few tame insectoids</li>
+					<li>Some tame insectoids</li>
+					<li>Lots of tame insectoids</li>
+				</thoughtStageDescriptions>
+			</li>
+		</comps>
+	</PreceptDef>
+
+	<!-- Disapproved thought for number of tamed insects -->
+	<ThoughtDef>
+		<defName>TamedInsectoids_Disapproved</defName>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<workerClass>ImprovedInsectoids.ThoughtWorker_Precept_TamedInsectoids_Disapproved</workerClass>
+		<stages>
+			<li>
+				<label>few tamed insects</label>
+				<description>We have a few tame insectoids. This is wrong.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+			<li>
+				<label>too many tamed insects</label>
+				<description>We have far too many tame insectoids. They should be living in hives in the wild, not serving us.</description>
+				<baseMoodEffect>-5</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<!-- Loved thought for number of tamed insects -->
+	<ThoughtDef>
+		<defName>TamedInsectoids_Loved</defName>
+		<thoughtClass>Thought_Situational</thoughtClass>
+		<workerClass>ImprovedInsectoids.ThoughtWorker_Precept_TamedInsectoids_Loved</workerClass>
+		<stages>
+			<li>
+				<label>no tamed insects</label>
+				<description>We have no tame insectoids. Life feels so dull without them and their constant clicking.</description>
+				<baseMoodEffect>-2</baseMoodEffect>
+			</li>
+			<li>
+				<label>few tamed insects</label>
+				<description>We hardly have any tame insectoids. Still, something's better than nothing.</description>
+				<baseMoodEffect>1</baseMoodEffect>
+			</li>
+			<li>
+				<label>plenty of tamed insects</label>
+				<description>There's quite a few tame insectoids. I love looking at them. A few more wouldn't be bad, though.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+			<li>
+				<label>insects, insects everywhere</label>
+				<description>So many tamed insectoids! I feel like I'm in an insect hive! This is perfect.</description>
+				<baseMoodEffect>8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>
