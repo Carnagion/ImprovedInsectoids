@@ -17,9 +17,9 @@
 			<litterSizeCurve>
 				<points>
 					<li>(2.5, 0)</li>
-					<li>(3.0, 1)</li>
-					<li>(5.0, 3)</li>
-					<li>(5.5, 2)</li>
+					<li>(3.0, 0.5)</li>
+					<li>(5.0, 1)</li>
+					<li>(5.5, 0)</li>
 				</points>
 			</litterSizeCurve>
 		</value>
