@@ -64,9 +64,16 @@ namespace ImprovedInsectoids
                         if (Rand.Chance(properties.chance))
                         {
                             MentalStateDef mentalStateToStart = properties.mentalState;
-                            if (!(properties.exceptionForPlayerFaction is null) && target.Faction == Faction.OfPlayer)
+                            if (target.Faction == Faction.OfPlayer)
                             {
-                                mentalStateToStart = properties.exceptionForPlayerFaction;
+                                if (!ImprovedInsectoidsMod.modSettings.fearAffectsPlayerFaction)
+                                {
+                                    continue;
+                                }
+                                if (!(properties.exceptionForPlayerFaction is null))
+                                {
+                                    mentalStateToStart = properties.exceptionForPlayerFaction;
+                                }
                             }
                             target.mindState.mentalStateHandler.TryStartMentalState(mentalStateToStart, null, false, false, null, false, false, false);
                         }

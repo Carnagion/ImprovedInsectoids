@@ -56,6 +56,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ImprovedInsectoidsMod.cs" />
+    <Compile Include="ImprovedInsectoidsModSettings.cs" />
     <Compile Include="Comps\CompMentalStatePusher.cs" />
     <Compile Include="Comps\CompProperties_MentalStatePusher.cs" />
     <Compile Include="DefOf\MemeDefOf.cs" />
