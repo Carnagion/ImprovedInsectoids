@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<!-- Mod name displayed in settings menu -->
+	<ImprovedInsectoidsDisplayName>Improved Insectoids</ImprovedInsectoidsDisplayName>
+
+	<!-- Fear setting -->
+	<FearAffectsPlayerLabel>Insect fear affects player faction</FearAffectsPlayerLabel>
+	<FearAffectsPlayerTooltip>Toggles whether hostile insects can scare pawns from the player's faction. Default = true.</FearAffectsPlayerTooltip>
+
+</LanguageData>
