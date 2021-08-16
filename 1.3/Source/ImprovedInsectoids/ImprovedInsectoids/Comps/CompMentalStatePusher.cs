@@ -34,6 +34,11 @@ namespace ImprovedInsectoids
         {
             base.CompTick();
 
+            if (!ImprovedInsectoidsMod.modSettings.fearEnabled)
+            {
+                return;
+            }
+
             CompProperties_MentalStatePusher properties = this.Properties;
 
             counter += 1;
