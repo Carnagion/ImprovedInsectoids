@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Animals Expanded — Caves</li>
+		</mods>
+
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+
+				<!-- Makes cave crawlers, insectoid hulks, and ancient giant spiders tameable -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VAECaves_CaveCrawler" or defName="VAECaves_InsectoidHulk" or defName="VAECaves_AncientGiantSpider"]/comps/li[@Class="AnimalBehaviours.CompProperties_Untameable"]</xpath>
+				</li>
+
+				<!-- Reduces wildness of cave crawlers and giant spiders -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="VAECaves_CaveCrawler" or defName="VAECaves_GiantSpider"]/race/wildness</xpath>
+					<value>
+						<wildness>0.85</wildness>
+					</value>
+				</li>
+
+				<!-- Gives cave crawlers and giant spiders fear-inducing ability -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VAECaves_CaveCrawler" or defName="VAECaves_GiantSpider"]/comps</xpath>
+					<value>
+						<li Class="ImprovedInsectoids.CompProperties_MentalStatePusher">
+							<mentalState>PanicFlee</mentalState>
+							<radius>8</radius>
+							<chance>0.16</chance>
+							<tickInterval>1000</tickInterval>
+							<exceptionForPlayerFaction>Wander_OwnRoom</exceptionForPlayerFaction>
+						</li>
+					</value>
+				</li>
+
+				<!-- Reduces wildness of giant spider hatchlings -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="VAECaves_GiantSpiderHatchling"]/race/wildness</xpath>
+					<value>
+						<wildness>0.30</wildness>
+					</value>
+				</li>
+
+				<!-- Reduces wildness of insectoid hulks -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="VAECaves_InsectoidHulk"]/race/wildness</xpath>
+					<value>
+						<wildness>0.90</wildness>
+					</value>
+				</li>
+
+				<!-- Reduces wildness of ancient giant spiders -->
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="VAECaves_AncientGiantSpider"]/race/wildness</xpath>
+					<value>
+						<wildness>0.95</wildness>
+					</value>
+				</li>
+
+				<!-- Gives ancient giant spiders and insectoid hulks fear-inducing ability -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName="VAECaves_AncientGiantSpider" or defName="VAECaves_InsectoidHulk"]/comps</xpath>
+					<value>
+						<li Class="ImprovedInsectoids.CompProperties_MentalStatePusher">
+							<mentalState>PanicFlee</mentalState>
+							<radius>10</radius>
+							<chance>0.20</chance>
+							<tickInterval>1000</tickInterval>
+							<exceptionForPlayerFaction>Wander_OwnRoom</exceptionForPlayerFaction>
+						</li>
+					</value>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+
+</Patch>
