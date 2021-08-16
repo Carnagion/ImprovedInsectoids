@@ -4,7 +4,11 @@
 	<!-- Mod name displayed in settings menu -->
 	<ImprovedInsectoidsDisplayName>Improved Insectoids</ImprovedInsectoidsDisplayName>
 
-	<!-- Fear setting -->
+	<!-- Fear enabled setting -->
+	<FearEnabledLabel>Insect fear enabled</FearEnabledLabel>
+	<FearEnabledTooltip>Toggles whether insects have the ability to scare pawns from a different faction as them. Default = true.</FearEnabledTooltip>
+
+	<!-- Fear affects player setting -->
 	<FearAffectsPlayerLabel>Insect fear affects player faction</FearAffectsPlayerLabel>
 	<FearAffectsPlayerTooltip>Toggles whether hostile insects can scare pawns from the player's faction. Default = true.</FearAffectsPlayerTooltip>
 
