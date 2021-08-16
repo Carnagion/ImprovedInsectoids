@@ -56,6 +56,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HarmonyPatches\Patches_PreceptWorker_Animal.cs" />
     <Compile Include="ImprovedInsectoidsMod.cs" />
     <Compile Include="ImprovedInsectoidsModSettings.cs" />
     <Compile Include="Comps\CompMentalStatePusher.cs" />
@@ -65,8 +66,8 @@
     <Compile Include="HarmonyPatches\Patches_Pawn.cs" />
     <Compile Include="HarmonyPatches\HarmonyPatches.cs" />
     <Compile Include="HarmonyPatches\Patches_ExecutionUtility.cs" />
-    <Compile Include="Misc\ThoughtWorker_Precept_TamedInsectoids_Disapproved.cs" />
-    <Compile Include="Misc\ThoughtWorker_Precept_TamedInsectoids_Loved.cs" />
+    <Compile Include="Misc\ThoughtWorker_Precept_TamedInsectoids_Mild.cs" />
+    <Compile Include="Misc\ThoughtWorker_Precept_TamedInsectoids_Harsh.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
