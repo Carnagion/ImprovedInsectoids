@@ -36,17 +36,20 @@ As the mod's name implies, Improved Insectoids makes vanilla insects better by a
 
 This means you will no longer have to risk your tamer's life every time you want an insect pet. You only need a male and a female insect (of the same species, of course), and you'll be able to mass-produce all the insects you want.
 
-Additionally, megaspiders have a small chance to scare away other creatures near them. Affected creatures will try to flee from the map (unless they belong to the player's faction, in which case they will try to hide in a room).
+Additionally, megaspiders have a small chance to scare away other creatures near them. Affected creatures will try to flee from the map (unless they belong to the player's faction, in which case they will try to hide in a room). This can be configured in the settings menu to not affect the player's faction, or to be disabled entirely.
 
 	MOD SUPPORT
 
 Improved Insectoids activates additional features if the following mods/DLCs are loaded:
 
 	- Ideology
-	A new meme called "Insect Primacy" becomes available. Followers believe that insectoids are the ultimate goal of evolution, and therefore place them in very high esteem - they will suffer large mood penalties for killing or slaughtering innocent insectoids or eating their meat. There are multiple other precepts that can be chosen, with issues relating to taming insects, eating insect jelly, and so on.
+	A new meme called "Insect Primacy" becomes available. Followers believe that insectoids are the ultimate goal of evolution, and therefore place them in very high esteem - they will suffer large mood penalties for killing or slaughtering innocent insectoids or eating their meat. There are multiple other precepts that can be chosen, with issues relating to taming insects, eating insect jelly, and so on. Finally, insects can also be chosen as venerated animals - although this is not recommended.
 
 	- Vanilla Factions Expanded - Insectoids
 	All insects from VFE - Insectoids become tameable and gain a fear-inducing ability similar to the megaspiders'. Gigalocusts and megapedes get the ability to reproduce, and their wildness is reduced. Insectoid queens and royal megaspiders cannot reproduce due to having fixed genders, while larvae cannot reproduce due to never reaching adulthood.
+
+	- Vanilla Animals Expanded - Caves
+	Giant spiders of all kinds, cave crawlers, and insectoid hulks become tameable, gain the fear-inducing ability, and also become able to reproduce.
 
 	- Alpha Animals
 	All creatures with the Insectoid flesh type added by Alpha Animals are counted as insects by the "Insect Primacy" meme and its precepts (if you have Ideology, that is). Certain creatures, such as the black hive insects and the bumbledrone queen and hierophant, get a fear-inducing ability similar to the megaspiders'.
@@ -61,13 +64,10 @@ Note that the aforementioned mods must also be on the same version as Improved I
 1. Do wild insects reproduce?
 A. No. In vanilla, wild animals do not mate. Hostile wild insects will reproduce the usual way, i.e. by making more hives that spawn new insects every now and then. However, if you have the Wild Reproduction mod, they probably will be able to reproduce as well.
 
-2. I can't add insectoids as venerated animals. Why?
-A. Vanilla does not count insects as venerated animals. Theoretically, it is possible to patch this using Harmony, but that brings up another problem - each insect would count as a venerated animal by itself, thus needing 3 slots (in vanilla) or 8 (with VFE - Insectoids). Instead, it was much more convenient to make custom thoughts, issues, and precepts that apply to every single insect. They are not counted as venerated animals, but followers get similar mood buffs and debuffs depending on the situation.
-
-3. My colonists hide in their rooms during infestations! Why?
+2. My colonists hide in their rooms during infestations! Why?
 A. This is caused by the fear-instilling ability added to larger insects. This can be disabled for the player faction in Improved Insectoids' settings menu.
 
-4. Is this mod compatible with:
+3. Is this mod compatible with:
 	- Vanilla Factions Expanded - Insectoids?
 	A. Yes. Some additional features are activated if it is loaded. See MOD SUPPORT.
 
@@ -101,10 +101,10 @@ A. This is caused by the fear-instilling ability added to larger insects. This c
 	- Any other mod that changes insects/reproduction/taming?
 	A. Improved Insectoids uses xpath patching to work. As long as the other mod is also only adding nodes using patches, and not replacing nodes or overwriting defs entirely, it should be fine.
 
-5. Is it safe to add to an ongoing save?
+4. Is it safe to add to an ongoing save?
 A. Yes, absolutely. Additionally, it is good practice to make a backup of the save file before adding it, just in case something unexpectedly goes wrong.
 
-6. Is it safe to remove from ongoing saves?
+5. Is it safe to remove from ongoing saves?
 A. If the save isn't using Ideology or the Insect Primacy meme, then it should be fine to remove this mod. If it is, then it's probably not safe to remove it. Note that any tamed insects from VFE - Insectoids will become hostile again. Regardless, it is good practice to make a backup of the save file before removing it, just in case something unexpectedly goes wrong.
 
 	CREDITS
