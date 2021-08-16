@@ -24,6 +24,7 @@ namespace ImprovedInsectoids
 
             Listing_Standard window = new Listing_Standard();
             window.Begin(inRect);
+            window.CheckboxLabeled("FearEnabledLabel".Translate(), ref modSettings.fearEnabled, "FearEnabledTooltip".Translate());
             window.CheckboxLabeled("FearAffectsPlayerLabel".Translate(), ref modSettings.fearAffectsPlayerFaction, "FearAffectsPlayerTooltip".Translate());
             window.End();
         }
