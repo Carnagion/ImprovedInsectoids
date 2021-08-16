@@ -6,6 +6,8 @@ namespace ImprovedInsectoids
     {
         public bool fearAffectsPlayerFaction = true;
 
+        public bool fearEnabled = true;
+
         /// <summary>
         /// Saves and loads settings.
         /// </summary>
@@ -14,6 +16,7 @@ namespace ImprovedInsectoids
             base.ExposeData();
 
             Scribe_Values.Look(ref fearAffectsPlayerFaction, "fearAffectsPlayerFaction", true, false);
+            Scribe_Values.Look(ref fearEnabled, "fearEnabled", true, false);
         }
     }
 }
