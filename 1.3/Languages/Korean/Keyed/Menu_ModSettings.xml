@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+	<!-- Mod name displayed in settings menu -->
+	<ImprovedInsectoidsDisplayName>Improved Insectoids</ImprovedInsectoidsDisplayName>
+
+	<!-- Fear enabled setting -->
+	<FearEnabledLabel>곤충 공포</FearEnabledLabel>
+	<FearEnabledTooltip>곤충이 다른 세력의 폰을 공포에 질리게 할지입니다. 기본값 = 참.</FearEnabledTooltip>
+
+	<!-- Fear affects player setting -->
+	<FearAffectsPlayerLabel>플레이어 세력의 곤충 공포</FearAffectsPlayerLabel>
+	<FearAffectsPlayerTooltip>적대적 곤충이 플레이어 세력의 폰을 공포에 질리게 할지입니다. 기본값 = 참.</FearAffectsPlayerTooltip>
+
+</LanguageData>
