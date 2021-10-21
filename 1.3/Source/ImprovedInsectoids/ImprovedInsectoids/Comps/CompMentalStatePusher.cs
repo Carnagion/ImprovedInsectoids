@@ -7,14 +7,9 @@ namespace ImprovedInsectoids
 {
     public class CompMentalStatePusher : ThingComp
     {
-        public int counter = 0;
+        private int counter;
 
         private List<Pawn> pawnsAlreadyTried = new List<Pawn>();
-
-        public override void Initialize(CompProperties props)
-        {
-            base.Initialize(props);
-        }
 
         /// <summary>
         /// Returns this ThingComp's CompProperties.
@@ -34,17 +29,17 @@ namespace ImprovedInsectoids
         {
             base.CompTick();
 
-            if (!ImprovedInsectoidsMod.modSettings.fearEnabled)
+            if (!ImprovedInsectoidsMod.ModSettings.fearEnabled)
             {
                 return;
             }
 
             CompProperties_MentalStatePusher properties = this.Properties;
 
-            counter += 1;
-            if (counter >= properties.tickInterval)
+            this.counter += 1;
+            if (this.counter >= properties.tickInterval)
             {
-                counter = 0;
+                this.counter = 0;
 
                 if (!(this.parent is Pawn pawn))
                 {
@@ -57,38 +52,40 @@ namespace ImprovedInsectoids
 
                 foreach (Thing thing in GenRadial.RadialDistinctThingsAround(pawn.Position, pawn.Map, properties.radius, true))
                 {
-                    if (thing != this.parent && thing is Pawn target && !(target.Dead || target.Downed || target.InMentalState || pawnsAlreadyTried.Contains(target)))
+                    if ((thing == this.parent) || !(thing is Pawn target) || (target.Dead || target.Downed || target.InMentalState || pawnsAlreadyTried.Contains(target)))
                     {
-                        pawnsAlreadyTried.Add(target);
+                        continue;
+                    }
+                    this.pawnsAlreadyTried.Add(target);
 
-                        if (!properties.affectOwnFaction && target.Faction == pawn.Faction)
+                    if (!properties.affectOwnFaction && target.Faction == pawn.Faction)
+                    {
+                        continue;
+                    }
+
+                    if (!Rand.Chance(properties.chance))
+                    {
+                        continue;
+                    }
+                    MentalStateDef mentalStateToStart = properties.mentalState;
+                    if (target.Faction == Faction.OfPlayer)
+                    {
+                        if (!ImprovedInsectoidsMod.ModSettings.fearAffectsPlayerFaction)
                         {
                             continue;
                         }
-
-                        if (Rand.Chance(properties.chance))
+                        if (!(properties.exceptionForPlayerFaction is null))
                         {
-                            MentalStateDef mentalStateToStart = properties.mentalState;
-                            if (target.Faction == Faction.OfPlayer)
-                            {
-                                if (!ImprovedInsectoidsMod.modSettings.fearAffectsPlayerFaction)
-                                {
-                                    continue;
-                                }
-                                if (!(properties.exceptionForPlayerFaction is null))
-                                {
-                                    mentalStateToStart = properties.exceptionForPlayerFaction;
-                                }
-                            }
-                            target.mindState.mentalStateHandler.TryStartMentalState(mentalStateToStart, null, false, false, null, false, false, false);
+                            mentalStateToStart = properties.exceptionForPlayerFaction;
                         }
                     }
+                    target.mindState.mentalStateHandler.TryStartMentalState(mentalStateToStart, null, false, false, null, false, false, false);
                 }
             }
 
-            if (counter >= 30000)
+            if (this.counter >= 30000)
             {
-                pawnsAlreadyTried.Clear();
+                this.pawnsAlreadyTried.Clear();
             }
         }
     }

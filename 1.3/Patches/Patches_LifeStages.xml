@@ -6,6 +6,7 @@
 		<xpath>Defs/LifeStageDef[defName="EusocialInsectAdult"]</xpath>
 		<value>
 			<reproductive>true</reproductive>
+			<shearable>true</shearable>
 		</value>
 	</Operation>
 
