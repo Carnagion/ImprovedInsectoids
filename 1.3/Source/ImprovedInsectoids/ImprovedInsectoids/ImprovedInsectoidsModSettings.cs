@@ -15,8 +15,8 @@ namespace ImprovedInsectoids
         {
             base.ExposeData();
 
-            Scribe_Values.Look(ref fearAffectsPlayerFaction, "fearAffectsPlayerFaction", true, false);
-            Scribe_Values.Look(ref fearEnabled, "fearEnabled", true, false);
+            Scribe_Values.Look(ref this.fearAffectsPlayerFaction, "fearAffectsPlayerFaction", true, false);
+            Scribe_Values.Look(ref this.fearEnabled, "fearEnabled", true, false);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace ImprovedInsectoids
 
         public CompProperties_MentalStatePusher()
         {
-            compClass = typeof(CompMentalStatePusher);
+            this.compClass = typeof(CompMentalStatePusher);
         }
     }
 }

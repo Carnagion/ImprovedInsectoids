@@ -5,14 +5,21 @@ namespace ImprovedInsectoids
 {
     public class ImprovedInsectoidsMod : Mod
     {
-        public static ImprovedInsectoidsModSettings modSettings;
-
         /// <summary>
-        /// Stores mod settings.
+        /// Initialises a new instance of <see cref="ImprovedInsectoidsMod"/> and stores mod settings.
         /// </summary>
         public ImprovedInsectoidsMod(ModContentPack content) : base(content)
         {
-            modSettings = this.GetSettings<ImprovedInsectoidsModSettings>();
+            ImprovedInsectoidsMod.ModSettings = this.GetSettings<ImprovedInsectoidsModSettings>();
+        }
+        
+        /// <summary>
+        /// Stores an instance of the mod settings.
+        /// </summary>
+        public static ImprovedInsectoidsModSettings ModSettings
+        {
+            get;
+            private set;
         }
 
         /// <summary>
@@ -24,8 +31,8 @@ namespace ImprovedInsectoids
 
             Listing_Standard window = new Listing_Standard();
             window.Begin(inRect);
-            window.CheckboxLabeled("FearEnabledLabel".Translate(), ref modSettings.fearEnabled, "FearEnabledTooltip".Translate());
-            window.CheckboxLabeled("FearAffectsPlayerLabel".Translate(), ref modSettings.fearAffectsPlayerFaction, "FearAffectsPlayerTooltip".Translate());
+            window.CheckboxLabeled("FearEnabledLabel".Translate(), ref ImprovedInsectoidsMod.ModSettings.fearEnabled, "FearEnabledTooltip".Translate());
+            window.CheckboxLabeled("FearAffectsPlayerLabel".Translate(), ref ImprovedInsectoidsMod.ModSettings.fearAffectsPlayerFaction, "FearAffectsPlayerTooltip".Translate());
             window.End();
         }
 
