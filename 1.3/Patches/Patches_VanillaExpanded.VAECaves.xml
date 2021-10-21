@@ -136,7 +136,7 @@
 						<value>
 							<li Class="CompProperties_Shearable">
 						        <woolDef>VFEI_Spidersilk</woolDef>
-						        <shearIntervalDays>1</shearIntervalDays>
+						        <shearIntervalDays>3</shearIntervalDays>
 						        <woolAmount>10</woolAmount>
 					        </li>
 					    </value>
