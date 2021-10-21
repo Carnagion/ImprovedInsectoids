@@ -23,6 +23,8 @@
 		<li>Ludeon.RimWorld.Ideology</li>
 		<li>OskarPotocki.VFE.Insectoid</li>
 		<li>sarg.alphaanimals</li>
+		<li>roolo.giddyupbattlemounts</li>
+		<li>VanillaExpanded.VAECaves</li>
 	</loadAfter>
 	<incompatibleWith>
 		<li>Carnagion.BreedableInsects</li>
@@ -71,10 +73,10 @@ A. This is caused by the fear-instilling ability added to larger insects. This c
 	- Vanilla Factions Expanded - Insectoids?
 	A. Yes. Some additional features are activated if it is loaded. See MOD SUPPORT.
 
-	- Alpha Animals?
+	- Vanilla Animals Expanded - Caves?
 	A. Yes. Some additional features are activated if it is loaded. See MOD SUPPORT.
 
-	- Vanilla Factions Expanded - Insectoids?
+	- Alpha Animals?
 	A. Yes. Some additional features are activated if it is loaded. See MOD SUPPORT.
 
 	- Anima Animals - Community Pack?
