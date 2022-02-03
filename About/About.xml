@@ -51,7 +51,7 @@ Improved Insectoids activates additional features if the following mods/DLCs are
 	All insects from VFE - Insectoids become tameable and gain a fear-inducing ability similar to the megaspiders'. Gigalocusts and megapedes get the ability to reproduce, and their wildness is reduced. Insectoid queens and royal megaspiders cannot reproduce due to having fixed genders, while larvae cannot reproduce due to never reaching adulthood.
 
 	- Vanilla Animals Expanded - Caves
-	Giant spiders of all kinds, cave crawlers, and insectoid hulks become tameable, gain the fear-inducing ability, and also become able to reproduce.
+	Giant spiders of all kinds, cave crawlers, and insectoid hulks become tameable, gain the fear-inducing ability, and also become able to reproduce. Ancient and regular giant spiders will produce spidersilk every few days, and reproduce by laying eggs.
 
 	- Alpha Animals
 	All creatures with the Insectoid flesh type added by Alpha Animals are counted as insects by the "Insect Primacy" meme and its precepts (if you have Ideology, that is). Certain creatures, such as the black hive insects and the bumbledrone queen and hierophant, get a fear-inducing ability similar to the megaspiders'.
@@ -59,7 +59,10 @@ Improved Insectoids activates additional features if the following mods/DLCs are
 	- Anima Animals - Community Pack
 	Anima megaspiders gain the fear ability. Additionally, they become able to reproduce, and their wildness is reduced. If Ideology is active, anima megaspiders are also counted as insects for the various precepts.
 
-Note that the aforementioned mods must also be on the same version as Improved Insectoids.
+	- Save Our Ship 2
+	Cosmopillars and stellapedes become able to reproduce and get the fear ability.
+
+Note that the aforementioned mods must be loaded in the correct order. You will get a warning or error from RimWorld or whatever mod manager you use if you load them in the wrong order.
 
 	FAQ
 
@@ -110,7 +113,7 @@ A. This is caused by the fear-instilling ability added to larger insects. This c
 A. Yes, absolutely. Additionally, it is good practice to make a backup of the save file before adding it, just in case something unexpectedly goes wrong.
 
 5. Is it safe to remove from ongoing saves?
-A. If the save isn't using Ideology or the Insect Primacy meme, then it should be fine to remove this mod. If it is, then it's probably not safe to remove it. Note that any tamed insects from VFE - Insectoids will become hostile again. Regardless, it is good practice to make a backup of the save file before removing it, just in case something unexpectedly goes wrong.
+A. Yes, unless you are using Ideology. Regardless, it is good practice to make a backup of the save file before removing it, just in case something unexpectedly goes wrong. Note that tamed insects from VFE-Insectoids will become hostile if you remove the mod mid-save.
 
 	CREDITS
 
