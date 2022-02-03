@@ -14,6 +14,7 @@
 		<xpath>Defs/ThingDef[defName="Spelopede"]/race</xpath>
 		<value>
 			<mateMtbHours>8</mateMtbHours>
+			<gestationPeriodDays>4</gestationPeriodDays>
 			<litterSizeCurve>
 				<points>
 					<li>(2.5, 0)</li>
@@ -30,6 +31,7 @@
 		<xpath>Defs/ThingDef[defName="Megaspider"]/race</xpath>
 		<value>
 			<mateMtbHours>8</mateMtbHours>
+			<gestationPeriodDays>6</gestationPeriodDays>
 			<litterSizeCurve>
 				<points>
 					<li>(1.5, 0)</li>

@@ -128,6 +128,16 @@
 					</value>
 				</li>
 
+				<!-- Allows ancient giant spiders to eat regular food -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VAECaves_AncientGiantSpider"]/comps/li[@Class="AnimalBehaviours.CompProperties_EatWeirdFood"]</xpath>
+				</li>
+
+				<!-- Makes ancient giant spiders use the default ThinkTree -->
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/ThingDef[defName="VAECaves_AncientGiantSpider"]/race/thinkTreeMain</xpath>
+				</li>
+
 				<!-- Allows harvesting of VFEI spidersilk from ancient and regular giant spiders if spidersilk exists -->
 				<li Class="PatchOperationConditional">
 					<xpath>/Defs/ThingDef[defName="VFEI_Spidersilk"]</xpath>
